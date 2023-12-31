@@ -46,10 +46,9 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- [[ Setup Plugins with Lazy ]]
-
-package.path = './?/_init.lua;' .. package.path
--- require("registry")
-require "plugins"
+-- `require "name"` looks for `./lua/name/init.lua` to initialize the path given
+-- package.path = './lua/?/init.lua;' .. package.path
+require "lazy-setup"
 
 
 -- [[ Basic Keymaps ]]
